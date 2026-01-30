@@ -21,7 +21,7 @@ namespace ApiTests.Tests
 
             // Act
             var response = await _httpClient.GetAsync($"/products/{productId}");
-            var content = await response.Content.ReadAsStringAsync();
+            var content = await response.Content.ReadAsStringAsync(); // To read as string
             var product = JsonConvert.DeserializeObject<fakestoreapiModel.Product>(content);
 
             // Assert
